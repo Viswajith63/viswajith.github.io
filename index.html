@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white; /* Updated background color */
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #03045e; /* Updated color */
+            color: white;
+            padding: 5px 0;
+            margin-bottom: 100px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar {
+            background: linear-gradient(90deg, rgb(180, 117, 251) 0%, rgb(122, 211, 244) 100%);
+            padding: 10px 20px;
+            border-radius: 50px;
+            margin: 10px 0; /* Add margin to avoid overlap with content */
+            width: fit-content; /* Adjust width to fit content */
+            position: fixed;
+            top: 20px; /* Add a top offset */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            width: fit-content;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Container */
+        .container {
+            width: 80%;
+            margin: 110px auto 20px auto;
+        }
+
+        section {
+            margin-top: 50px;
+            margin-bottom: 60px;
+        }
+
+        h1{
+            border-bottom: 2px solid #03045e; /* Updated color */
+            padding-bottom: 10px;
+            color: #03045e; /* Updated color */
+            text-align: center;
+            font-size:300%;
+        }
+
+        h2 {
+            border-bottom: 2px solid #03045e; /* Updated color */
+            padding-bottom: 10px;
+            color: #03045e; /* Updated color */
+        }
+
+        .spaced-list li {
+            margin-bottom: 10px; /* Adjust the value to control the spacing */
+        }
+
+
+        p {
+            line-height: 1.6;
+        }
+
+        /* Project and Blog Post Styles */
+        .project {
+            background: #dbf8ff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .project:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .project h3 {
+            margin-top: 0;
+        }
+
+        button {
+            background-color: #0077b6; /* Updated color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #3D52A0; /* Updated color */
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Contact Section */
+        #contact p {
+            font-size: 1.1em;
+        }
+
+        #contact a {
+            color: #5680E9; /* Updated color */
+            text-decoration: none;
+        }
+
+        #contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: #8860D0; /* Updated color */
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        
+        <nav class="navbar">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h1>My portfolio</h1>
+            <h2>About Me</h2>
+            <p>Hello! I'm Viswajith T, A highly motivated and results-driven individual with a strong background in web development.
+                 Known for being a fast learner, quickly adapting to new technologies and environments and dedicated to 
+                 continuous improvement and enjoy working on projects that involve Html,ReactJs,NodeJs.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Blog Management System:</h3>
+                <ul class="spaced-list">
+                    <li>A straightforward website where users can create, 
+                        publish, and manage their own blogs providing an interactive and user-friendly 
+                        interface and handles data storage, authentication, and other server-side functionalities.
+                    </li>
+                    
+                    <li>
+                        Developed using ReactJS as frontend and Django API
+                    </li>
+                
+                </ul>
+                
+                <button onclick="toggleContent('project1')">Read More</button>
+                <div id="project1" class="hidden">
+                    <p>Additional details and images for project 1.</p>
+                    <!-- Insert images or additional content as needed -->
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Job Application Website </h3>
+                <ul class="spaced-list">
+                    <li>This website allows the user to Search for a job, apply for position and to 
+                        attend/schedule interview and it also includes inbuilt resume builder</li>
+                    <li>
+                        The employer can specify the job opening via job posting and domain specific requirements.
+                    </li>
+                    <li>
+                        Developed using ReactJS as HTML,Css,JavaScript and Django.
+                    </li>
+                
+                </ul>
+                <button onclick="toggleContent('project2')">Read More</button>
+                <div id="project2" class="hidden">
+                    <p>Additional details and images for project 2.</p>
+                    <!-- Insert images or additional content as needed -->
+                </div>
+            </div>
+            <div class="project">
+                <h3>AI Based Fraud Detection System</h3>
+                <ul class="spaced-list">
+                    <li> This is a machine learning project. where it helps the users to detect the ID Proof whether
+                        its legitimate or not and it can identify the malicious text messages, audio messages and
+                        gives warning to the user in real time.
+                    </li>
+                    <li>
+                        The system is developed using Html,Django and PostgreSQL for database.
+                    </li>
+                
+                </ul>
+                <button onclick="toggleContent('project3')">Read More</button>
+                <div id="project3" class="hidden">
+                    <p>Additional details and images for project 3.</p>
+                    <!-- Insert images or additional content as needed -->
+                </div>
+            </div>
+            <div class="project">
+                <h3>Courier Management System</h3>
+                <ul class="spaced-list">
+                    <li>A simple Courier management and administration system that Streamline 
+                        courier delivery across locations to efficiently manage couriers, track deliveries and optimize operations
+                    </li>
+                    <li>
+                        Developed using ReactJS as Python and Mysql.
+                    </li>
+                
+                </ul>
+                <button onclick="toggleContent('project4')">Read More</button>
+                <div id="project4" class="hidden">
+                    <p>Additional details and images for project 4.</p>
+                    <!-- Insert images or additional content as needed -->
+                </div>
+            </div>
+            <!-- Add more projects as needed -->
+        </section>
+
+        <section id="blog">
+            <h2>Blog</h2>
+            <div class="blog-post">
+                <h3>Runner Up in InterCollege Hackathon</h3>
+                <p>I recently participated in a 24-hour hackathon...</p>
+                <button onclick="toggleContent('post1')">Read More</button>
+                <p id="post1" class="hidden">*Thrilled to be a Runner-Up at KSI YUGAM - Designathon'24!*
+                    <br><br>
+                    I recently participated in the KSI YUGAM - Designathon'24, a 24-hour hackathon organized by Kumaraguru College of Technology, and I'm excited to share that my team, along with "AI based Fraud Detection system," secured the Runner-Up position!
+                    <br><br>
+                    This event was an incredible opportunity to push my skills and collaborate with brilliant minds. We spent 24 hours brainstorming, designing, and developing a solution to a real-world problem. The experience was both challenging and rewarding, and I'm grateful for the guidance provided by the mentors.
+                    <br><br>
+                    A huge congratulations to the winners and all the other participants who showcased their talent and innovation.
+                    <br><br>
+                    This success wouldn't have been possible without the dedication of my Team Members Akash A, Surya J, Meganathan D.
+                    Thank you to all My Mentors, and the entire team for making Designathon'24 a resounding success!
+                    <br><br>
+                    Kumaraguru College of Technology Kumaraguru School of Innovation Kumaraguru Yugam
+                    #KCT #KSI #KSIYUGAM  #Designathon24 #Hackathon #Innovation #Collaboration #AI #RunnerUp</p>
+            </div>
+            <div class="blog-post">
+                <h3>Alumni Coordinator in Department Association</h3>
+                <p>Excited to share that I have started a new role as...</p>
+                <button onclick="toggleContent('post2')">Read More</button>
+                <p id="post2" class="hidden">"Arise, awake and stop not till the goal is reached." - Swami Vivekananda 
+                    <br><br>
+                    Excited to share that I have started a new role as Alumni Coordinator in the Department Association of Information Technology!
+                    <br><br>
+                    I am grateful to my alumni Ms.Kiruthika Parameswaran and Ms.Sruthi Krishnakumar for making my investiture more memorable. 
+                    <br><br>
+                    I want to express my deepest gratitude to Dr.Prema Arokia Mary G mam, President and Vice President of Department Association of Information Technology, for their unwavering support and encouragement. 
+                    <br><br>
+                    Eager to collaborate with fellow department members to accomplish great things.
+                    <br><br>
+                    Here's to pursuing excellence and striving for even greater success in the future! 
+                    #kumaraguruCollegeofTechnology
+                    #informationtechnology hashtag #lifeatkct
+                    #newrole #alumnicoodinator #gratitude</p>
+            </div>
+            <!-- Add more blog posts as needed -->
+        </section>
+
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <p>Email: <a href="viswajith606@gmail.com">viswajith606@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/viswajith-t" target="_blank">viswajith-t</a></p>
+            <p>GitHub: <a href="https://github.com/viswajith63" target="_blank">viswajith63</a></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Viswajith . All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+            } else {
+                content.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
